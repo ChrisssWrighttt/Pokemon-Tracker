@@ -536,7 +536,7 @@ body {
 }
 
 .overlay-card-info {
-  font-family: 'PokemonGB';
+  font-family: system-ui, sans-serif;
   font-size: 12px;
   color: #fff;
   margin-bottom: 10px; /* spacing between info and sprite */
@@ -674,4 +674,5 @@ body {
   margin-right: 2px;
   vertical-align: left;
 }
+
 
