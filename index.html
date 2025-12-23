@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff3b30">
+
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pokedex">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <title>Pokédex</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Launch Screen -->
+<section id="launch-screen">
+  <div class="launch-content">
+    <img src="pokedex-logo.png" alt="Pokédex Logo" class="launch-logo">
+
+    <div class="center-content">
+      <p class="subtitle">CARD COLLECTION TRACKER</p>
+      <button id="start-btn">TAP TO START</button>
+    </div>
+  </div>
+</section>
+
+<!-- Main App Screen -->
+<section id="app-screen" hidden>
+  <header class="app-header">
+  <div class="header-left">
+    <select id="tab-dropdown">
+      <option value="pokedex">POKEDEX</option>
+      <option value="binder">BINDER</option>
+      <option value="gen1">GEN 1</option>
+      <option value="gen2">GEN 2</option>
+      <option value="gen3">GEN 3</option>
+      <option value="gen4">GEN 4</option>
+      <option value="gen5">GEN 5</option>
+      <option value="gen6">GEN 6</option>
+      <option value="gen7">GEN 7</option>
+      <option value="gen8">GEN 8</option>
+      <option value="gen9">GEN 9</option>
+    </select>
+  </div>
+
+  <div class="gen-tab-buttons">
+  <button id="btn-all">ALL</button>
+  <button id="btn-collected">COLLECTED</button>
+  <button id="btn-missing">MISSING</button>
+</div>
+
+  <img src="pokedex-logo.png" alt="Pokédex Logo" class="app-logo">
+
+</header>
+
+  <main class="app-content">
+
+<!-- POKEDEX tab content -->
+<div class="tab-content" id="pokedex" hidden>
+  <div class="pokedex-container">
+<svg id="pokedex-svg" viewBox="0 0 1920 1057" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background is handled by CSS -->
+
+
+  
+  <!-- Buttons and shapes from Inkscape -->
+  <ellipse
+     id="button-info"
+     cx="553.40784"
+     cy="697.19434"
+     rx="26.492933"
+     ry="26.945803"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.14096" />
+
+  <ellipse
+     id="button-mute"
+     cx="1345.1658"
+     cy="717.71759"
+     rx="17.366438"
+     ry="17.739252"
+     fill="transparent"
+     stroke="black"
+     stroke-width="1.40643" />
+
+  <rect
+     id="button-name"
+     x="605.2616"
+     y="735.23547"
+     width="151.48521"
+     height="54.344471"
+     ry="6.7247853"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.51819" />
+
+  <rect
+     id="button-left"
+     x="1042.1816"
+     y="699.05743"
+     width="75.413719"
+     height="35.545311"
+     ry="4.2686229"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.62659" />
+
+<rect
+   id="button-screen-left"
+   x="588.61072"
+   y="439.93848"
+   width="247.05168"
+   height="167.78352"
+   ry="27.394978"
+   fill="#e6f6ff"
+   stroke="black"
+   stroke-width="2.5" />
+
+<image
+   id="left-screen-img"
+   x="588.61072"
+   y="439.93848"
+   width="247.05168"
+   height="167.78352"
+   href="" />
+   
+
+  <rect
+     id="button-right"
+     x="1120.7618"
+     y="699.17664"
+     width="75.413719"
+     height="35.545311"
+     ry="4.2686229"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.62659" />
+  
+  <rect
+     id="button-1"
+     x="1036.8978"
+     y="576.08997"
+     width="63.967873"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.37491" />
+
+  <rect
+     id="button-2"
+     x="1104.9659"
+     y="576.07294"
+     width="63.515003"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36649" />
+
+  <rect
+     id="button-3"
+     x="1171.7775"
+     y="575.70813"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-4"
+     x="1238.5135"
+     y="575.79144"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-5"
+     x="1306.0531"
+     y="575.75244"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-6"
+     x="1036.7629"
+     y="613.84851"
+     width="63.967873"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.37491" />
+
+  <rect
+     id="button-7"
+     x="1104.8311"
+     y="613.83148"
+     width="63.515003"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36649" />
+
+  <rect
+     id="button-8"
+     x="1171.6426"
+     y="613.46667"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-9"
+     x="1238.3787"
+     y="613.54999"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-10"
+     x="1305.9182"
+     y="613.51099"
+     width="63.401783"
+     height="32.983471"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.36438" />
+
+  <rect
+     id="button-screen-right"
+     x="1042.0215"
+     y="413.73444"
+     width="333.03702"
+     height="137.69798"
+     ry="24.157541"
+     fill="transparent"
+     stroke="black"
+     stroke-width="2.54977" />
+     
+     <text id="screen-text-right" 
+      x="1200" 
+      y="480" 
+      font-family="PokemonGB" 
+      font-size="24" 
+      fill="#fff" 
+      text-anchor="middle"
+      dominant-baseline="middle">
+</text>
+
+  <rect
+     id="button-green"
+     x="603.46942"
+     y="685.92816"
+     width="69.009109"
+     height="19.053558"
+     ry="9.5267792"
+     fill="transparent"
+     stroke="black"
+     stroke-width="3.11864" />
+
+  <rect
+     id="button-orange"
+     x="694.73389"
+     y="685.97723"
+     width="69.009109"
+     height="19.053558"
+     ry="9.5267792"
+     fill="transparent"
+     stroke="black"
+     stroke-width="3.11864" />
+
+    
+  </svg>
+</div>
+
+</div>
+
+<!-- BINDER tab content -->
+<div class="tab-content" id="binder" hidden>
+  <div class="binder-container">
+    <!-- Pages will be generated dynamically by JS -->
+  </div>
+
+  <div class="binder-nav">
+    <button id="prev-page">Back</button>
+    <span id="page-counter">1 of 33</span>
+    <button id="next-page">Next</button>
+  </div>
+</div>
+
+
+<main class="app-content">
+
+  <!-- GEN 1 tab content -->
+  <div class="tab-content" id="gen1" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 2 tab content -->
+  <div class="tab-content" id="gen2" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 3 tab content -->
+  <div class="tab-content" id="gen3" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 4 tab content -->
+  <div class="tab-content" id="gen4" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 5 tab content -->
+  <div class="tab-content" id="gen5" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 6 tab content -->
+  <div class="tab-content" id="gen6" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 7 tab content -->
+  <div class="tab-content" id="gen7" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 8 tab content -->
+  <div class="tab-content" id="gen8" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+  <!-- GEN 9 tab content -->
+  <div class="tab-content" id="gen9" hidden>
+    <div class="card-grid"></div>
+  </div>
+
+</main>
+
+<!-- Search overlay -->
+<div id="search-overlay" hidden>
+  <div class="overlay-bg"></div>
+  <div class="overlay-search">
+    <input type="text" id="search-input" placeholder="Search Pokémon..." autofocus>
+
+    <!-- Wrap buttons for side-by-side layout -->
+    <div class="search-buttons">
+      <button id="search-btn">SEARCH</button>
+      <button id="close-search">CLOSE</button>
+    </div>
+  </div>
+</div>
+
+<!-- Info overlay -->
+<div id="info-overlay" hidden>
+  <div class="overlay-bg"></div>
+  <div class="overlay-box">
+    <p id="info-id"></p>
+    <p id="info-name"></p>
+    <p id="info-type"></p>
+    <p id="info-height"></p>
+    <p id="info-weight"></p>
+  </div>
+</div>
+
+
+<!-- Global overlay -->
+<div id="card-overlay" hidden>
+  <div class="overlay-bg"></div>
+  <div class="overlay-card">
+    <p class="overlay-card-info"></p> <!-- info line above sprite -->
+    <img src="" alt="" class="overlay-card-image">
+    <p class="overlay-card-name"></p>
+    <div class="overlay-buttons">
+      <button id="catch-btn">CATCH</button>
+      <button id="release-btn">RELEASE</button>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- Scripts -->
+<script>
+const startBtn = document.getElementById("start-btn");
+const launchContent = document.querySelector("#launch-screen .launch-content");
+const launchScreen = document.getElementById("launch-screen");
+const appScreen = document.getElementById("app-screen");
+
+// Generation ranges
+const generations = {
+  gen1: { start: 1, end: 151 },
+  gen2: { start: 152, end: 251 },
+  gen3: { start: 252, end: 386 },
+  gen4: { start: 387, end: 493 },
+  gen5: { start: 494, end: 649 },
+  gen6: { start: 650, end: 721 },
+  gen7: { start: 722, end: 809 },
+  gen8: { start: 810, end: 905 },
+  gen9: { start: 906, end: 1025 },
+};
+
+startBtn.addEventListener("click", async () => {
+  launchContent.classList.add("launch-exit");
+
+  setTimeout(async () => {
+    launchScreen.style.display = "none";
+    appScreen.hidden = false;
+
+    // Hide all tabs
+    tabContents.forEach(c => c.hidden = true);
+
+    // Show POKEDEX tab
+    const pokedexTab = document.getElementById("pokedex");
+    pokedexTab.hidden = false;
+    pokedexTab.offsetHeight; // force reflow
+    pokedexTab.classList.add('active');
+
+    // Force dropdown to POKEDEX
+    tabDropdown.selectedIndex = 0;
+    tabDropdown.value = "pokedex";
+
+  }, 600);
+});
+
+const caughtPokemon = {}; // Tracks caught Pokémon globally
+
+// Load caught Pokémon from localStorage
+function loadCaughtPokemon() {
+  const saved = localStorage.getItem('caughtPokemon');
+  if (saved) {
+    Object.assign(caughtPokemon, JSON.parse(saved));
+  }
+}
+
+// Save caught Pokémon to localStorage
+function saveCaughtPokemon() {
+  localStorage.setItem('caughtPokemon', JSON.stringify(caughtPokemon));
+}
+
+// Call this immediately at script start
+loadCaughtPokemon();
+
+// Fetch Pokémon for a specific generation
+async function fetchPokemonByGen(genId) {
+  const { start, end } = generations[genId];
+  const limit = end - start + 1;
+
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${start - 1}&limit=${limit}`);
+    const data = await response.json();
+
+    const container = document.querySelector(`#${genId} .card-grid`);
+    container.innerHTML = "";
+
+for (const pokemon of data.results) {
+  const res = await fetch(pokemon.url);
+  const details = await res.json();
+
+  // Fill in ID if Pokémon is caught but ID is missing
+  if (caughtPokemon[pokemon.name] && caughtPokemon[pokemon.name].id === undefined) {
+    caughtPokemon[pokemon.name].id = details.id;
+    saveCaughtPokemon(); // update localStorage
+  }
+
+  const isCaught = caughtPokemon[pokemon.name]?.caught || false;
+
+  // Get types as comma-separated string
+  const types = details.types.map(t => t.type.name).join(', ');
+
+  // Create card element
+  const card = document.createElement('div');
+  card.classList.add('pokemon-card');
+  card.dataset.name = pokemon.name;
+  card.dataset.id = details.id;
+  card.dataset.types = types;           // NEW
+  card.dataset.height = details.height; // NEW
+  card.dataset.weight = details.weight; // NEW
+
+  // Always store the sprite URL for overlay
+  const spriteSrc = details.sprites.front_default;
+  card.dataset.sprite = spriteSrc;
+
+  // Apply grayscale if not caught
+  const filterStyle = isCaught ? 'none' : 'grayscale(100%)';
+
+  card.innerHTML = `
+    <img src="${spriteSrc}" alt="${pokemon.name} Card" class="card-image" style="filter: ${filterStyle}">
+    <p class="card-name">${pokemon.name}</p>
+  `;
+
+  container.appendChild(card);
+}
+
+// Re-attach overlay events so the new cards are clickable
+attachCardOverlayEvents();
+
+
+  } catch (error) {
+    console.error(`Failed to fetch Pokémon for ${genId}:`, error);
+  }
+}
+
+
+// Overlay functionality
+function attachCardOverlayEvents() {
+  const cards = document.querySelectorAll('.pokemon-card');
+  const overlay = document.getElementById('card-overlay');
+  const overlayBg = overlay.querySelector('.overlay-bg');
+  const overlayCard = overlay.querySelector('.overlay-card');
+  const overlayImg = overlay.querySelector('.overlay-card-image');
+  const overlayName = overlay.querySelector('.overlay-card-name');
+  const catchBtn = document.getElementById('catch-btn');
+  const releaseBtn = document.getElementById('release-btn');
+
+  let originalRect = null;
+
+// Helper functions to save/load caught Pokémon
+function saveCaughtPokemon() {
+  localStorage.setItem('caughtPokemon', JSON.stringify(caughtPokemon));
+}
+
+function loadCaughtPokemon() {
+  const saved = localStorage.getItem('caughtPokemon');
+  if (saved) {
+    Object.assign(caughtPokemon, JSON.parse(saved));
+  }
+}
+
+// Call this at the start of your script
+loadCaughtPokemon();
+
+// Catch button logic
+catchBtn.addEventListener('click', () => {
+  const name = overlayName.textContent;
+  const card = document.querySelector(`.pokemon-card[data-name="${name}"]`);
+  if (!card) return;
+  const pokemonId = parseInt(card.dataset.id);
+
+  caughtPokemon[name] = { caught: true, id: pokemonId };
+
+  saveCaughtPokemon();
+
+  overlayImg.style.filter = 'none';
+  const cardImg = card.querySelector('img');
+  if (cardImg) cardImg.style.filter = 'none';
+
+  refreshBinderGreyscale();  // ✅ Update binder slots
+  updateRightScreenForVisibleGen();
+});
+
+releaseBtn.addEventListener('click', () => {
+  const name = overlayName.textContent;
+  const card = document.querySelector(`.pokemon-card[data-name="${name}"]`);
+  if (!card) return;
+  const pokemonId = parseInt(card.dataset.id);
+
+  caughtPokemon[name] = { caught: false, id: pokemonId };
+
+  saveCaughtPokemon();
+
+  overlayImg.style.filter = 'grayscale(100%)';
+  const cardImg = card.querySelector('img');
+  if (cardImg) cardImg.style.filter = 'grayscale(100%)';
+
+  refreshBinderGreyscale();  // ✅ Update binder slots
+  updateRightScreenForVisibleGen();
+});
+
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+
+    requestAnimationFrame(() => {
+      const cardRect = card.getBoundingClientRect();
+      originalRect = cardRect;
+
+      // Position overlay at the card's current location for animation
+      overlayCard.style.top = `${cardRect.top}px`;
+      overlayCard.style.left = `${cardRect.left}px`;
+      overlayCard.style.width = `${cardRect.width}px`;
+      overlayCard.style.height = `${cardRect.height}px`;
+
+      // Set Pokémon name
+      overlayName.textContent = card.dataset.name;
+
+      // Set sprite
+      overlayImg.src = card.dataset.sprite || card.querySelector('img').src;
+      overlayImg.alt = card.dataset.name;
+
+      // Set info line (ID and types)
+      const overlayInfo = overlay.querySelector('.overlay-card-info');
+
+      // Split types in case there are multiple (comma-separated)
+      const types = card.dataset.types.split(', ');
+
+      // Generate HTML with image(s)
+      const typesHtml = types.map(type => {
+      // Use the PNG from your Types folder
+      // Make sure the filename matches the type name, e.g., ELECTRIC.png
+      return `<img src="Types/${type.toLowerCase()}.png" alt="${type}" class="type-icon">`;
+      }).join(' ');
+
+      overlayInfo.innerHTML = `ID #${card.dataset.id} | ${typesHtml}`;
+
+
+      // Apply grayscale if not caught
+      const isCaught = caughtPokemon[card.dataset.name]?.caught || false;
+      overlayImg.style.filter = isCaught ? 'none' : 'grayscale(100%)';
+
+      // Ensure main card image also matches caught status
+      const cardImg = card.querySelector('img');
+      if (cardImg) cardImg.style.filter = isCaught ? 'none' : 'grayscale(100%)';
+
+      // Show overlay
+      overlay.hidden = false;
+      overlay.style.pointerEvents = 'all';
+      setTimeout(() => overlayBg.style.opacity = 1, 10);
+
+      // Animate overlay to center of screen
+      const centerX = window.innerWidth / 2 - cardRect.width / 2;
+      const centerY = window.innerHeight / 2 - cardRect.height / 2;
+
+      overlayCard.style.transform = `
+        translate(${centerX - cardRect.left}px, ${centerY - cardRect.top}px)
+        rotateY(720deg) rotateX(15deg)
+        scale(2)
+      `;
+    });
+
+  });
+});
+
+  overlayBg.addEventListener('click', () => {
+    if (!originalRect) return;
+
+    overlayCard.style.transform = `
+      translate(0px, 0px)
+      rotateY(0deg) rotateX(0deg)
+      scale(1)
+    `;
+    overlayBg.style.opacity = 0;
+
+    setTimeout(() => {
+      overlay.hidden = true;
+      overlay.style.pointerEvents = 'none';
+      originalRect = null;
+    }, 800);
+  });
+}
+
+const genTabButtons = document.querySelector('.gen-tab-buttons');
+genTabButtons.style.display = 'none'; // ensure hidden on initial load
+
+
+// Dropdown tab switching
+const tabDropdown = document.getElementById('tab-dropdown');
+const tabContents = document.querySelectorAll('.tab-content');
+const genButtonsContainer = document.querySelector('.gen-tab-buttons'); // GEN buttons container
+
+tabDropdown.addEventListener('change', () => {
+  const selectedTab = tabDropdown.value;
+
+  // Hide all tabs
+  tabContents.forEach(c => c.hidden = true);
+
+  // Show selected tab
+  document.getElementById(selectedTab).hidden = false;
+
+  // Fetch Pokémon if the tab is a generation
+  if (generations[selectedTab]) {
+    fetchPokemonByGen(selectedTab);
+  }
+
+  // Show buttons only for GEN tabs
+  if (selectedTab.startsWith('gen')) {
+    genButtonsContainer.style.display = 'flex';
+  } else {
+    genButtonsContainer.style.display = 'none';
+  }
+
+  // Update the right screen count for the visible GEN tab
+  updateRightScreenForVisibleGen();
+});
+
+
+const buttons = ['button-mute', 'button-left', 'button-right'];
+
+buttons.forEach(id => {
+  document.getElementById(id).addEventListener('click', () => {
+    alert(`${id} clicked!`);
+  });
+});
+
+const rightScreen = document.getElementById('screen-text-right');
+
+function updateRightScreenForVisibleGen() {
+  const visibleTab = [...tabContents].find(
+    tab => !tab.hidden && tab.id.startsWith('gen')
+  );
+  if (!visibleTab) return;
+
+  const genId = visibleTab.id;
+  const genNumber = genId.replace('gen', '');
+  const countText = getGenCaughtText(genId);
+
+  rightScreen.innerHTML = `
+    <tspan x="1220" dy="0" text-anchor="middle">
+      GENERATION ${genNumber}
+    </tspan>
+    <tspan x="1200" dy="30" text-anchor="middle">
+      ${countText}
+    </tspan>
+  `;
+}
+
+const buttonText = {
+  'button-1': () => getGenCaughtText('gen1'),
+  'button-2': () => getGenCaughtText('gen2'),
+  'button-3': () => getGenCaughtText('gen3'),
+  'button-4': () => getGenCaughtText('gen4'),
+  'button-5': () => getGenCaughtText('gen5'),
+  'button-6': () => getGenCaughtText('gen6'),
+  'button-7': () => getGenCaughtText('gen7'),
+  'button-8': () => getGenCaughtText('gen8'),
+  'button-9': () => getGenCaughtText('gen9'),
+  'button-10': () => {
+    const total = 1025;
+    const caughtCount = Object.values(caughtPokemon).filter(p => p.caught).length;
+    return `${caughtCount}/${total}`;
+  }
+};
+
+// Helper function to count caught Pokémon for a GEN
+function getGenCaughtText(genId) {
+  const { start, end } = generations[genId];
+  const total = end - start + 1;
+
+  const caughtCount = Object.entries(caughtPokemon)
+    .filter(([name, p]) => {
+      if (!p.caught) return false;
+
+      // If ID exists, check range
+      if (p.id !== undefined) return p.id >= start && p.id <= end;
+
+      // Otherwise, try to find the card in the GEN DOM (if already fetched)
+      const card = document.querySelector(`#${genId} .pokemon-card[data-name="${name}"]`);
+      if (card) {
+        const id = parseInt(card.dataset.id);
+        return id >= start && id <= end;
+      }
+
+      // Fallback: count it anyway (optional)
+      return false;
+    })
+    .length;
+
+  return `${caughtCount}/${total}`;
+}
+
+// Attach click events
+for (const [btnId, genFunc] of Object.entries(buttonText)) {
+  const button = document.getElementById(btnId);
+  if (!button || !genFunc) continue;
+
+  button.addEventListener('click', () => {
+    if (btnId === 'button-10') {
+      rightScreen.innerHTML = `
+        <tspan x="1220" dy="0" text-anchor="middle"> POKEDEX</tspan>
+        <tspan x="1200" dy="30" text-anchor="middle">${genFunc()}</tspan>
+      `;
+    } else {
+      const genNumber = btnId.replace('button-', '');
+      const countText = genFunc();
+      rightScreen.innerHTML = `
+        <tspan x="1220" dy="0" text-anchor="middle">GENERATION ${genNumber}</tspan>
+        <tspan x="1200" dy="30" text-anchor="middle">${countText}</tspan>
+      `;
+    }
+  });
+}
+
+const genButtons = ['btn-all', 'btn-collected', 'btn-missing'];
+
+genButtons.forEach(id => {
+  const btn = document.getElementById(id);
+  btn.addEventListener('click', () => {
+    // Get currently visible GEN tab
+    const visibleTab = [...tabContents].find(tab => !tab.hidden && tab.id.startsWith('gen'));
+    if (!visibleTab) return;
+
+    const cards = visibleTab.querySelectorAll('.pokemon-card');
+
+    cards.forEach(card => {
+      const name = card.dataset.name;
+      if (id === 'btn-all') {
+        card.style.display = 'block'; // show all
+      } else if (id === 'btn-collected') {
+  card.style.display = caughtPokemon[name]?.caught ? 'block' : 'none';
+} else if (id === 'btn-missing') {
+  card.style.display = !caughtPokemon[name]?.caught ? 'block' : 'none';
+}
+    });
+  });
+});
+
+const nameButton = document.getElementById('button-name');
+const searchOverlay = document.getElementById('search-overlay');
+const searchBg = searchOverlay.querySelector('.overlay-bg');
+const searchInput = document.getElementById('search-input');
+const closeSearchBtn = document.getElementById('close-search');
+const searchBtn = document.getElementById('search-btn');
+
+nameButton.style.cursor = 'pointer';
+
+nameButton.addEventListener('click', () => {
+  searchOverlay.hidden = false;
+  searchOverlay.style.pointerEvents = 'all';
+
+  // Small delay ensures focus works on mobile
+  setTimeout(() => {
+    searchInput.focus();
+  }, 100);
+});
+
+closeSearchBtn.addEventListener('click', closeSearch);
+searchBg.addEventListener('click', closeSearch);
+
+function closeSearch() {
+  searchOverlay.hidden = true;
+  searchOverlay.style.pointerEvents = 'none';
+  searchInput.value = '';
+
+  // Remove previous search result if exists
+  const oldSprite = document.getElementById('search-result-sprite');
+  if (oldSprite) oldSprite.remove();
+}
+
+// ----------------------------
+// SEARCH button functionality
+// ----------------------------
+searchBtn.addEventListener('click', async () => {
+  const pokemonName = searchInput.value.trim().toLowerCase();
+  if (!pokemonName) return;
+
+  try {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+    if (!response.ok) throw new Error('Pokémon not found');
+
+    const data = await response.json();
+    const spriteUrl = data.sprites.front_default;
+
+    // Set sprite in SVG
+    const leftScreenImg = document.getElementById('left-screen-img');
+    leftScreenImg.setAttribute('href', spriteUrl);
+
+    // Close the search overlay
+    closeSearch();
+
+// Populate info overlay
+document.getElementById('info-id').textContent = `POKEDEX #${data.id}`;
+document.getElementById('info-name').textContent = `${data.name.toUpperCase()}`;
+
+// Clear previous type images
+const typeContainer = document.getElementById('info-type');
+typeContainer.innerHTML = ''; // remove old content
+
+// Add type images
+data.types.forEach(t => {
+  const img = document.createElement('img');
+  img.src = `types/${t.type.name.toLowerCase()}.png`;
+  img.alt = t.type.name.toUpperCase();
+  img.classList.add('info-type-icon'); // use the bigger version
+  typeContainer.appendChild(img);
+});
+
+document.getElementById('info-height').textContent = `Height: ${data.height}`;
+document.getElementById('info-weight').textContent = `Weight: ${data.weight}`;
+
+    // Show the info overlay
+    infoOverlay.hidden = false;
+
+  } catch (err) {
+    alert('Pokémon not found');
+  }
+});
+
+const infoOverlay = document.getElementById('info-overlay');
+const closeInfoBtn = document.getElementById('close-info');
+
+infoOverlay.querySelector('.overlay-bg').addEventListener('click', () => {
+  infoOverlay.hidden = true;
+});
+
+const infoButton = document.getElementById('button-info');
+infoButton.addEventListener('click', () => {
+  infoOverlay.hidden = !infoOverlay.hidden;
+});
+
+
+
+
+
+
+
+// ======================
+// BINDER SETUP (Optimized)
+// ======================
+
+const binderContainer = document.querySelector('.binder-container');
+const prevBtn = document.getElementById('prev-page');
+const nextBtn = document.getElementById('next-page');
+const pageCounter = document.getElementById('page-counter');
+
+const slotsPerPage = 16; // 4x4 grid per page
+const totalPokemon = 1025;
+const spreads = Math.ceil(totalPokemon / (slotsPerPage * 2)); // 2 pages per spread
+let currentSpread = 0;
+let leftPages = [];
+let rightPages = [];
+
+// ---------------------
+// Generate empty pages
+// ---------------------
+function generateBinderPages() {
+  binderContainer.innerHTML = '';
+
+  for (let i = 0; i < spreads; i++) {
+    const leftPage = document.createElement('div');
+    leftPage.className = 'binder-page left-page';
+    const leftGrid = document.createElement('div');
+    leftGrid.className = 'card-slot-grid';
+
+    const rightPage = document.createElement('div');
+    rightPage.className = 'binder-page right-page';
+    const rightGrid = document.createElement('div');
+    rightGrid.className = 'card-slot-grid';
+
+    for (let j = 0; j < slotsPerPage; j++) {
+      leftGrid.appendChild(createCardSlot());
+      rightGrid.appendChild(createCardSlot());
+    }
+
+    leftPage.appendChild(leftGrid);
+    rightPage.appendChild(rightGrid);
+
+    binderContainer.appendChild(leftPage);
+    binderContainer.appendChild(rightPage);
+  }
+
+  leftPages = binderContainer.querySelectorAll('.left-page');
+  rightPages = binderContainer.querySelectorAll('.right-page');
+}
+
+// ---------------------
+// Create empty slot
+// ---------------------
+function createCardSlot() {
+  const slot = document.createElement('div');
+  slot.className = 'card-slot';
+  return slot;
+}
+
+// ---------------------
+// Populate binder with Pokémon
+// ---------------------
+async function populateBinder() {
+  const allPromises = [];
+  for (let id = 1; id <= totalPokemon; id++) {
+    allPromises.push(fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json()));
+  }
+
+  const allData = await Promise.all(allPromises);
+
+  allData.forEach((data, index) => {
+    const spreadIndex = Math.floor(index / (slotsPerPage * 2));
+    const slotIndex = index % slotsPerPage;
+    let pageSlots;
+
+    if ((index % (slotsPerPage * 2)) < slotsPerPage) {
+      pageSlots = leftPages[spreadIndex].querySelectorAll('.card-slot');
+    } else {
+      pageSlots = rightPages[spreadIndex].querySelectorAll('.card-slot');
+    }
+
+    const slot = pageSlots[slotIndex];
+    slot.dataset.name = data.name;
+
+    const isCaught = caughtPokemon[data.name]?.caught || false;
+
+    slot.innerHTML = `
+      <img src="${data.sprites.front_default}" 
+           alt="${data.name}" 
+           style="width: 80px; height: 80px; filter: ${isCaught ? 'none' : 'grayscale(100%)'};">
+      <p style="margin: 5px 0 0; font-size: 14px; text-align: center; color: #fff;">
+        ${data.name}
+      </p>
+    `;
+  });
+}
+
+// ---------------------
+// Update all binder slots (grayscale/colour)
+// ---------------------
+function refreshBinderGreyscale() {
+  document.querySelectorAll('.card-slot').forEach(slot => {
+    const name = slot.dataset.name;
+    const isCaught = caughtPokemon[name]?.caught || false;
+
+    const img = slot.querySelector('img');
+    if (img) img.style.filter = isCaught ? 'none' : 'grayscale(100%)';
+
+    // Add or remove class
+    if (isCaught) {
+      slot.classList.add('caught');
+    } else {
+      slot.classList.remove('caught');
+    }
+  });
+}
+
+
+// ---------------------
+// Show a spread
+// ---------------------
+function showSpread(index) {
+  leftPages.forEach(p => p.style.display = 'none');
+  rightPages.forEach(p => p.style.display = 'none');
+
+  if (leftPages[index]) leftPages[index].style.display = 'flex';
+  if (rightPages[index]) rightPages[index].style.display = 'flex';
+
+  pageCounter.textContent = `${index + 1} of ${spreads}`;
+}
+
+// ---------------------
+// Binder navigation
+// ---------------------
+prevBtn.addEventListener('click', () => {
+  if (currentSpread > 0) {
+    currentSpread--;
+    showSpread(currentSpread);
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentSpread < spreads - 1) {
+    currentSpread++;
+    showSpread(currentSpread);
+  }
+});
+
+// ---------------------
+// Initialize binder
+// ---------------------
+generateBinderPages();
+populateBinder().then(() => {
+  refreshBinderGreyscale();
+  showSpread(currentSpread);
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>
