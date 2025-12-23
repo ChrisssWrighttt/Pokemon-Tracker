@@ -620,7 +620,7 @@ cards.forEach(card => {
       const typesHtml = types.map(type => {
       // Use the PNG from your Types folder
       // Make sure the filename matches the type name, e.g., ELECTRIC.png
-      return `<img src="Types/${type.toLowerCase()}.png" alt="${type}" class="type-icon">`;
+      return `<img src="types/${type.toLowerCase()}.png" alt="${type}" class="type-icon">`;
       }).join(' ');
 
       overlayInfo.innerHTML = `ID #${card.dataset.id} | ${typesHtml}`;
@@ -1088,4 +1088,5 @@ populateBinder().then(() => {
 
 </script>
 </body>
+
 </html>
